@@ -19,3 +19,5 @@ Route::get('about', function () {
 	$jcm = ["Fault", "Analytics"];
     return view('about', ['data' => $jcm]);
 });
+
+Route::resource('todo', 'ToDoController');
