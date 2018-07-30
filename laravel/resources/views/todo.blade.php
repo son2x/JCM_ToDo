@@ -12,7 +12,7 @@
 
 @section('todo-list')
     <div>
-        <table>
+        <table class="table">
             <thead>
                 <tr>
                     <th>Head 1</th>
