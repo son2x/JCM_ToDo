@@ -1,10 +1,20 @@
 
 @extends('template.app')
 
-@section('title', 'Home')
+@section('title', $page['title'])
+@section('heading', $page['heading'])
 
-@section('sidebar')
-    @parent
+@section('todo-add-buton')    
+    <div>
+        <i>Add</i>
+    </div>
+@endsection
 
-    <i>This is a html block</i>
+@section('todo-list')
+    <div>
+        <table>
+            <thead></thead>
+            <tbody></tbody>
+        </table>
+    <div>
 @endsection

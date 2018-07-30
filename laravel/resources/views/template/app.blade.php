@@ -26,12 +26,18 @@
             </ul>
         </nav>
         
-        @section('sidebar')
-            This is the master sidebar.
-        @show
+        <div class="container-fluid">
+            <main role="main">
+                <h1>@yield('heading')</h1>
 
-        <div class="container">
-            @yield('content')
+                @section('todo-add-buton')
+                    Todo add button
+                @show
+
+                @section('todo-list')
+                    Todo list
+                @show
+            </main>
         </div>
         
         <!--{% include footer.html %}

@@ -6,15 +6,22 @@ use Illuminate\Http\Request;
 
 class ToDoController extends Controller
 {
+
+    public $title   = '';
+    public $heading = '';
+
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+     public function index()
     {
         //
-        return view('todo');
+        $this->title   = 'List';
+        $this->heading = 'My To Do List';
+        
+        return view('todo')->with('page', ['title' => $this->title, 'heading' => $this->heading]);
     }
 
     /**
